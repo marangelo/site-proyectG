@@ -7,7 +7,7 @@ services:
         - "./:/app/gym"
         - "./default.tmpl:/kool/default.tmpl"
       ports:
-        - "81:80"
+        - "88:80"
       environment:
         - APP_NAME=gym
         - PHP_FPM_LISTEN=/run/php-fpm.sock

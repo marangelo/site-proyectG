@@ -5,7 +5,7 @@ services:
       restart: always
       volumes:
         - "./:/app/gym"
-        - ".//default.tmpl:/kool/default.tmpl"
+        - "./default.tmpl:/kool/default.tmpl"
       ports:
         - "81:80"
       environment:
@@ -13,7 +13,7 @@ services:
         - PHP_FPM_LISTEN=/run/php-fpm.sock
         - NGINX_LISTEN=80
         - NGINX_ROOT=/app/gym
-        - NGINX_INDEX=index.php
+        - NGINX_INDEX=index.html
         - NGINX_CLIENT_MAX_BODY_SIZE=25M
         - NGINX_PHP_FPM=unix:/run/php-fpm.sock
         - NGINX_FASTCGI_READ_TIMEOUT=60s
